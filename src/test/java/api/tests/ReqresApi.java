@@ -54,6 +54,11 @@ public class ReqresApi {
 		//Verify that Charles's id is 5
 		assertEquals(5,json.getInt("data.find{it.first_name == 'Charles'}.id"));
 		
+		//Assert using JsonPath that person with id 6, first name is  Tracey
+		//and lastname is Ramos
+		assertEquals("Ramos",json.getString("data.find{it.id==6}.last_name"));
+		assertEquals("Tracey",json.getString("data.find{it.id==6}.first_name"));
+		
 //		{
 //		    "page": 2,
 //		    "per_page": 3,
