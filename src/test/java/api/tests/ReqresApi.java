@@ -59,6 +59,10 @@ public class ReqresApi {
 		assertEquals("Ramos",json.getString("data.find{it.id==6}.last_name"));
 		assertEquals("Tracey",json.getString("data.find{it.id==6}.first_name"));
 		
+		given().header("Authorization", "Bearer 10960~07alELbC11w2DpnwzQ1rwfJb8M5u9wqDpoRfG57DWSxnjJAVmB1evcyfvZARz4EP")
+		.when().get("https://learn.cybertekschool.com/api/v1/accounts/self/users")
+		.thenReturn().body().prettyPrint();
+		
 //		{
 //		    "page": 2,
 //		    "per_page": 3,
