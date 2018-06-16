@@ -54,11 +54,25 @@ public class ReqresApi {
 		assertEquals(4,json.getInt("data.id[0]"));
 		//Verify that Charles's id is 5
 		assertEquals(5,json.getInt("data.find{it.first_name == 'Charles'}.id"));
+
 		assertEquals("Tracey", json.getString("data.find{it.id == 6}.first_name"));
 		assertEquals("Ramos", json.getString("data.find{it.id == 6}.last_name"));
 
 		Gson gson = new Gson();
 		System.out.println(gson.fromJson(gson.toJson(new Person("James") ),Person.class));
+		String s = "";
+
+
+		
+		//Assert using JsonPath that person with id 6, first name is  Tracey
+		//and lastname is Ramos
+		assertEquals("Ramos",json.getString("data.find{it.id==6}.last_name"));
+		assertEquals("Tracey",json.getString("data.find{it.id==6}.first_name"));
+		
+		given().header("Authorization", "Bearer 10960~07alELbC11w2DpnwzQ1rwfJb8M5u9wqDpoRfG57DWSxnjJAVmB1evcyfvZARz4EP")
+		.when().get("https://learn.cybertekschool.com/api/v1/accounts/self/users")
+		.thenReturn().body().prettyPrint();
+		
 
 //		{
 //		    "page": 2,
