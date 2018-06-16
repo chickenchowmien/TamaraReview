@@ -10,10 +10,11 @@ import static io.restassured.RestAssured.given;
 
 public class TwitterOath2Testing {
     String oath2;
-    //@Test
+    @Test
     public void getToken(){
         RestAssured.baseURI="https://api.twitter.com/";
         RestAssured.basePath="oauth2/token";
+
         Response response =  given().accept(ContentType.URLENC)
                 .auth()
                 .preemptive()
