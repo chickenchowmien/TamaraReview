@@ -37,3 +37,9 @@
 ehthumbs.db
 Thumbs.db
 /target/
+
+#######################
+
+.classpath
+.project
+.settings/
