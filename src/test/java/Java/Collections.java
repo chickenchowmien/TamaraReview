@@ -34,6 +34,9 @@ public class Collections {
 			
 		}
 		
+		mp.containsKey(2);
+		System.out.println(	mp.containsKey(2));
+		
 		
 	
 	}
