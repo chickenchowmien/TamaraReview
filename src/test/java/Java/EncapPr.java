@@ -3,18 +3,14 @@ package Java;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Encapsulation {
-	
+public class EncapPr {
+
 
     public static void main (String []args){
 
 List <locators> lc= new ArrayList<>();
-lc.add(new locators("//td[preceding-sibling::td='t']" , " E[A*='t' "));
-lc.add(new locators("E[contains(@A,'t')" , "E[A*='t']"));
-
-
-
-
+lc.add(new locators("//td[preceding-sibling::td='t']", "E[A*='t']"));
+lc.add(new locators("E[contains(@A,'t')" ,"E[A*='t']"));
 
     }
 
