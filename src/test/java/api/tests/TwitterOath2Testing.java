@@ -17,7 +17,7 @@ public class TwitterOath2Testing {
 
         Response response =  given().accept(ContentType.URLENC)
                 .auth()
-                .preemptive()
+                .preemptive()// this is client id, this is client secret
                 .basic("GcExgJg85VjOL3apjp3kqC75b","6ji2yWmc2VnQsSXlp3am6OXqiKTcm1aQldTwDlIfBCQGtK3ECS")
                 .param("grant_type", "client_credentials")
                 .expect()
