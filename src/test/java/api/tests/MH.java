@@ -167,14 +167,14 @@ public class MH {
         System.out.println("11111111111111111111111111111111 COMPARING YEAR THEN ALPHABETICAL ORDER " +
                 "1111111111111111111111111111");
 
-        for (Car element : MH.compareCars(
-                (Car<String, String, String, Integer, Double, Double, Integer> o1,
-                                           Car<String, String, String, Integer, Double, Double, Integer> o2) -> {
-            if (o1.getPrice() < o2.getPrice()) return -1;
-            else if (o1.getPrice() > o2.getPrice()) return 1;
-            return 0;
-                }
-        )
+//        for (Car element : MH.compareCars(
+//                (Car<String, String, String, Integer, Double, Double, Integer> o1,
+//                                           Car<String, String, String, Integer, Double, Double, Integer> o2) -> {
+//            if (o1.getPrice() < o2.getPrice()) return -1;
+//            else if (o1.getPrice() > o2.getPrice()) return 1;
+//            return 0;
+//                }
+//        )
         {
             System.out.println();
         }
