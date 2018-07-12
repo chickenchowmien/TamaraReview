@@ -1,4 +1,8 @@
 package api.tests;
 
-public class Red {
+public abstract class Red implements Top {
+    @Override
+    public void spin() {
+        System.out.println("Red Abstract Spin");
+    }
 }
